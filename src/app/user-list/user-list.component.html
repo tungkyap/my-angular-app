@@ -1,0 +1,21 @@
+<button (click)="onUserCreate()">User Create</button>
+<br>
+<table style="border: 1px solid black; border-collapse: collapse;">
+  <tr>
+    <td>ID</td>
+    <td>username</td>
+    <td>email</td>
+    <td>aksi</td>
+  </tr>
+  @for (user of listUsers; track user) {
+    <tr>
+      <td>{{user.id}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.email}}</td>
+      <td>
+        <button (click)="onDeleteClick(user)">delete</button>
+        <button (click)="onEditClick(user)">edit</button>
+      </td>
+    </tr>
+  }
+</table>
